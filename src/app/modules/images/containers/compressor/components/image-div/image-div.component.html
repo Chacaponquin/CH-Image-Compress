@@ -1,0 +1,5 @@
+<div *ngIf="!image; else imageDiv" class="imageBlock"></div>
+
+<ng-template #imageDiv>
+    <img [src]="image" class="border border-dark rounded-3 w-25 imageBlock" alt="image-compressor" />
+</ng-template>

@@ -1,0 +1,8 @@
+.blockNotFound {
+    padding: 3rem 5rem;
+    font-size: 4rem;
+    color: white;
+    background-color: black;
+    font-weight: 700;
+    border-radius: 0.4rem;
+}

@@ -1,0 +1,5 @@
+.errorMessage {
+    position: fixed;
+    right: 2rem;
+    bottom: 0;
+}

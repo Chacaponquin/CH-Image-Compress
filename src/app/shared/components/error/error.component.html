@@ -1,0 +1,4 @@
+<div class="errorMessage" *ngIf="error">
+    <ngb-alert [animation]="true" [type]="'danger'" (closed)="close()">{{ error }}
+    </ngb-alert>
+</div>

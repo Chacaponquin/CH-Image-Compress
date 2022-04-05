@@ -1,0 +1,33 @@
+<app-error [error]="error" (cleanError)="noError()"></app-error>
+
+<div class="col-8 mx-auto py-5">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column align-items-center text-center">
+            <h1>Original Image</h1>
+            <app-image-div [image]="imageShow"></app-image-div>
+            <input type="file" accept="image/*" class="mt-3" #imageInput (change)="changeImage($event.target['files'])" />
+        </div>
+
+        <div class="d-flex flex-column align-items-center text-center">
+            <h1>Result</h1>
+            <app-image-div [image]="imageResult"></app-image-div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center py-3">
+        <ng-container [ngSwitch]="loading">
+            <button *ngSwitchCase="false" class="btn btn-dark" style="font-size: 1.5rem" [disabled]="!imageOriginal" (click)="onSubmit()">
+        Compress
+      </button>
+
+            <button *ngSwitchCase="true" class="btn btn-dark d-flex align-items-center" type="button" disabled style="font-size: 1.5rem">
+        <span
+          class="spinner-border spinner-border-sm me-2"
+          role="status"
+          aria-hidden="true"
+        ></span>
+        Loading...
+      </button>
+        </ng-container>
+    </div>
+</div>
