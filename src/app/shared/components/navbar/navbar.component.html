@@ -1,6 +1,10 @@
+<ng-template let-modal #content>
+    <app-auth-form [activeForm]="activeForm"></app-auth-form>
+</ng-template>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
     <div class="container-fluid">
-        <a class="navbar-brand font-weight-bold">Hector Image-Compress</a>
+        <a class="navbar-brand font-weight-bold">Hector-Images</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -10,7 +14,20 @@
         </li>
       </ul>
       <div class="d-flex">
-        <button class="btn btn-outline-light me-2" type="button">Login</button>
+        <button
+          class="btn btn-outline-light me-2"
+          type="button"
+          (click)="openAuthForm(authForms.LOGIN)"
+        >
+          Login
+        </button>
+        <button
+          class="btn btn-outline-light me-2"
+          type="button"
+          (click)="openAuthForm(authForms.SIGNUP)"
+        >
+          Sign Up
+        </button>
       </div>
     </div>
   </div>
