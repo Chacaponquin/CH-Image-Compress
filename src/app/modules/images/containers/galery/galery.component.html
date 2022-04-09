@@ -1,1 +1,4 @@
-<p>galery works!</p>
+<div class="mx-auto col-10 py-3">
+    <app-upload-image (setImage)="uploadImage($event)"></app-upload-image>
+    <app-galery-image [userImages]="userImages"></app-galery-image>
+</div>

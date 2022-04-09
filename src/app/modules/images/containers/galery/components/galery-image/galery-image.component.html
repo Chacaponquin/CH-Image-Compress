@@ -1,0 +1,7 @@
+<div class="d-flex w-100 flex-wrap justify-content-around" *ngIf="userImages.length; else noImage">
+    <img *ngFor="let image of userImages" class="galery-image mx-3" src="{{ image.url }}" alt="{{ image._id }}" />
+</div>
+
+<ng-template #noImage>
+    <h4 class="w-100 text-center display-4 mt-5">No tienes imagenes</h4>
+</ng-template>

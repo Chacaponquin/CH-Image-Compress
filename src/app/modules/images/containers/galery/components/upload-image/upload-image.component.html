@@ -1,0 +1,7 @@
+<div class="d-flex w-100 justify-content-center">
+    <input type="file" #inputFile accept=".png, .jpg, .jpeg" style="display: none" (change)="sendImage($event)" />
+
+    <button class="btn btn-dark addImageButton" (click)="inputFile.click()">
+    Añadir Imagen
+  </button>
+</div>

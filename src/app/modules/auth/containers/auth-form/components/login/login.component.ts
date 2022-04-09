@@ -18,8 +18,11 @@ export class LoginComponent implements OnInit {
   });
 
   login() {
-    this.userService
-      .checkUser(this.loginForm.value)
-      .subscribe((user) => console.log(user));
+    this.userService.checkUser(this.loginForm.value).subscribe((user) => {
+      if (user) {
+        this.userService.currentUser.next(user);
+        localStorage.setItem('token', user.token);
+      }
+    });
   }
 }

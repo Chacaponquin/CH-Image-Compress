@@ -8,15 +8,13 @@ import { authForms } from 'src/app/data/interfaces/authForms.enum';
   styleUrls: ['./auth-form.component.css'],
 })
 export class AuthFormComponent implements OnInit {
-  @Input() activeForm: authForms; // = authForms.LOGIN;
+  @Input() activeForm: authForms = authForms.LOGIN;
 
   constructor(public activeModal: NgbActiveModal) {}
 
   authForms = authForms;
 
-  ngOnInit(): void {
-    console.log(this.activeForm);
-  }
+  ngOnInit(): void {}
 
   close() {
     this.activeModal.close();

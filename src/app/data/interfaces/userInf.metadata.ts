@@ -1,5 +1,8 @@
 export interface UserInfInterface {
   username: string;
   token: string;
-  images: string[];
+  images: {
+    _id: string;
+    url: string;
+  }[];
 }

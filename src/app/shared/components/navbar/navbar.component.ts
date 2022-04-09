@@ -12,13 +12,15 @@ export class NavbarComponent implements OnInit {
   constructor(private modalService: NgbModal) {}
 
   authForms = authForms;
+  openModal: boolean = true;
 
-  activeForm: authForms = authForms.LOGIN;
+  activeForm: authForms = authForms.SIGNUP;
 
   openAuthForm(authOption: authForms) {
     this.activeForm = authOption;
 
     this.modalService.open(AuthFormComponent);
+    this.activeForm = authForms.LOGIN;
   }
 
   ngOnInit(): void {}
